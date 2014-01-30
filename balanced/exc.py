@@ -1,6 +1,9 @@
 from __future__ import unicode_literals
 
-import httplib
+try:
+    import httplib
+except ImportError:
+    import http.client as httplib
 
 import wac
 

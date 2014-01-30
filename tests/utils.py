@@ -2,7 +2,11 @@ from __future__ import unicode_literals
 
 import contextlib
 import multiprocessing
-import unittest2 as unittest
+import sys
+if sys.version_info[0] == 3:
+    import unittest
+else:
+    import unittest2 as unittest
 
 from wsgiref.simple_server import make_server
 

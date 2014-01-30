@@ -3,7 +3,11 @@
 from __future__ import unicode_literals
 from datetime import date
 
-import unittest2 as unittest
+import sys
+if sys.version_info[0] == 3:
+    import unittest
+else:
+    import unittest2 as unittest
 import requests
 
 import balanced
